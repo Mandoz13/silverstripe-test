@@ -5,8 +5,6 @@ use SilverStripe\Assets\Image;
 
 class Customer extends DataObject
 {
-
-
 	private static $db = [
         'FirstName' => 'Varchar',
         'Surname' => 'Varchar',
@@ -20,6 +18,7 @@ class Customer extends DataObject
 
     private static $has_many = [
         'HostingContracts' => HostingContract::class,
+				'Transaction' => Transaction::class,
     ];
 
     private static $summary_fields = [
@@ -33,7 +32,7 @@ class Customer extends DataObject
         'Surname',
         'HostingContracts.ContractNumber',
 				//adding ContractType as searchable field
-				'HostingContracts.ContractType',
+				// 'HostingContracts.ContractType',
 
     ];
 

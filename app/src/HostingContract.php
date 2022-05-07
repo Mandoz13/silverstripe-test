@@ -9,7 +9,7 @@ class HostingContract extends DataObject
         'StartDate' => 'Date',
         'EndDate' => 'Date',
 				//ContractType is added
-				'ContractType' => 'Varchar',
+				// 'ContractType' => 'Varchar',
     ];
 
     private static $has_one = [
