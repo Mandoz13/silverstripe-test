@@ -14,11 +14,17 @@ class Customer extends DataObject
 
     private static $has_one = [
         'Avatar' => Image::class,
+				'OurCustomersPage' => OurCustomersPage::class,
     ];
+
+    //adding avatar(image) to $owns array so that Customer object recognised it wnen called in template
+		private static $owns = [
+		'Avatar'
+		];
 
     private static $has_many = [
         'HostingContracts' => HostingContract::class,
-				'Transaction' => Transaction::class,
+				'Transactions' => Transaction::class,
     ];
 
     private static $summary_fields = [

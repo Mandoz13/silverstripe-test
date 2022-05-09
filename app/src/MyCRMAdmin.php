@@ -1,7 +1,7 @@
 <?php
 
 use SilverStripe\Admin\ModelAdmin;
-use SilverStripe\Forms\Form; //namespace for using silverstripe forms
+
 
 
 class MyCRMAdmin extends ModelAdmin
@@ -9,11 +9,12 @@ class MyCRMAdmin extends ModelAdmin
     private static $managed_models = array(
 		'Customer',
 		'HostingContract',
-		'HostingType'
+		'HostingType',
+    'Message' //adding message to MyCRMAdmin
 
 	);
 
-  // using  getEditForm method to remove default ImportButton from modeladmin pages
+  // using  getEditForm method to remove default ImportButton from modeladmin pages.
   function getEditForm($id = null, $fields = null) {
           $form = parent::getEditForm($id, $fields);
           $form->Fields()
@@ -24,7 +25,7 @@ class MyCRMAdmin extends ModelAdmin
          return $form;
     }
 
-// Limiting the number of results that can be returned in the main area to 10 using getlist function
+// Limiting the number of results that can be returned in the main area to 10 using.
   public function getList()
    {
       $list = parent::getList();
@@ -37,7 +38,7 @@ class MyCRMAdmin extends ModelAdmin
    // {
    //     // parent::getCMSFields() does all the hard work and creates the fields for Title, IsActive and Content.
    //     $fields = parent::getCMSFields();
-   //     $fields->dataFieldByName('Customer')->setTitle('Client');
+   //     $fields->dataFieldByName('Customers')->setTitle('Client');
    //
    //     return $fields;
    // }
