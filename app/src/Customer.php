@@ -38,7 +38,7 @@ class Customer extends DataObject
         'Surname',
         'HostingContracts.ContractNumber',
 				//adding ContractType as searchable field
-				// 'HostingContracts.ContractType',
+				'HostingContracts.ContractType',
 
     ];
 

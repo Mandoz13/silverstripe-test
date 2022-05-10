@@ -8,8 +8,8 @@ class HostingContract extends DataObject
         'ContractNumber' => 'Varchar',
         'StartDate' => 'Date',
         'EndDate' => 'Date',
-				//ContractType is added
-				// 'ContractType' => 'Varchar',
+				//ContractType added here
+				'ContractType' => 'Varchar',
     ];
 
     private static $has_one = [
@@ -20,6 +20,7 @@ class HostingContract extends DataObject
     private static $summary_fields = [
         'ContractNumber',
         'EndDate',
+				'ContractType',
     ];
 
 	private static $table_name = 'HostingContract';

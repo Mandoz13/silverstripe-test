@@ -1,9 +1,5 @@
 <?php
-
 use SilverStripe\Admin\ModelAdmin;
-
-
-
 class MyCRMAdmin extends ModelAdmin
 {
     private static $managed_models = array(
